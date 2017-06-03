@@ -1,0 +1,6 @@
+services:
+  agreement_event_subscriber:
+    class: Drupal\agreement\EventSubscriber\AgreementSubscriber
+    arguments: []
+    tags:
+      - { name: event_subscriber }

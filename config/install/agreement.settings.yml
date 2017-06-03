@@ -1,0 +1,15 @@
+# Default settings of the Agreement module.
+
+text: <p>Our Agreement describe the terms on which you may access and browse through this Website. In order to become a member to this Website, you must read and accept all of these Terms of Use along with Disclaimer. Nothing contained herein shall be deemed to confer any third-party rights or benefits. In the event you do not agree to be bound by these agreement, you may not use nor access this Website or at any time after becoming a member, if you so desire, may opt out of the membership of the online forum.</p><p>We reserve the right to modify these agreement at any time, and without proper notice, by posting amended Terms of Use on this Website. Your use of this Website indicates your acceptance of the amended agreement. Therefore, for your own interest, you are advised to go through the our agreement periodically.</p>
+frequency: 0
+page_url: agreement
+page_title: Our Agreement
+checkbox_text: I agree.
+submit_text: Submit
+success_message: Thank you for accepting our agreement.
+failure_message: You must accept our agreement to continue.
+success_destination: ''
+pages: '<front>'
+page_negate: 0
+roles:
+  - authenticated

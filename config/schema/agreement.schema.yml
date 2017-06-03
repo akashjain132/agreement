@@ -1,0 +1,45 @@
+# Schema for the configuration of the Agreement module.
+
+agreement.settings:
+  type: config_object
+  label: 'Agreement Settings'
+  mapping:
+    text:
+      type: string
+      label: 'Agreement Text'
+    frequency:
+      type: string
+      label: 'Frequency'
+    page_url:
+      type: string
+      label: 'Agreement Page URL'
+    page_title:
+      type: string
+      label: 'Agreement Page Title'
+    checkbox_text:
+      type: string
+      label: 'Agreement Checkbox Text'
+    submit_text:
+      type: string
+      label: 'Agreement Submit Text'
+    success_message:
+      type: string
+      label: 'Agreement Success Message'
+    failure_message:
+      type: string
+      label: 'Agreement Failure Message'
+    success_destination:
+      type: string
+      label: 'Agreement Success Destination'
+    pages:
+      type: text_format
+      label: 'Pages'
+    page_negate:
+      type: integer
+      label: 'Show agreement on specific pages'
+    roles:
+      type: sequence
+      label: 'User Roles'
+      sequence:
+        - type: string
+          label: 'Role name'

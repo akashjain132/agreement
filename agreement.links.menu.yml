@@ -1,0 +1,5 @@
+agreement.settings:
+  route_name: agreement.admin_settings
+  title: 'Agreement Settings'
+  description: 'Configure settings for the Agreement module.'
+  parent: user.admin_index

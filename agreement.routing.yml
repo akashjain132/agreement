@@ -1,0 +1,12 @@
+agreement.admin_settings:
+  path: '/admin/config/people/agreement'
+  defaults:
+    _form: '\Drupal\agreement\Form\AgreementSettingsForm'
+    _title: 'Agreement Settings'
+  requirements:
+    _permission: 'administer account settings'
+  options:
+    _admin_route: TRUE
+
+route_callbacks:
+  - '\Drupal\agreement\Routing\AgreementRoutes::routes'

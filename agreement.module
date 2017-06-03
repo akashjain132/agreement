@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Module allows the administrator to force a user role to accept an agreement
+ * before accessing any site content.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function agreement_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.agreement':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The Agreement module allows the administrator to present a text-based agreement (think "Terms of Service") that users of a particular role must accept before they are allowed to access the site. The agreement is presented to users right after login, and must be accepted before the user can navigate to another page. Users will still be able to access the homepage (`<front>`) and `/logout` without accepting the agreement; all other pages will redirect the user to the agreement acceptance form.') . '</p>';
+      $output .= '<h3>' . t('Uses') . '</h3>';
+      $output .= 'The following options are configurable from the module\'s settings page:';
+
+      $output .= '<ul>';
+      $output .= '<li>' . t('User role to which the agreement is restricted') . '</li>';
+      $output .= '<li>' . t('The agreement page title') . '</li>';
+      $output .= '<li>' . t('The agreement text') . '</li>';
+      $output .= '<li>' . t('The agreement page URL') . '</li>';
+      $output .= '<li>' . t('The success & failure messages presented to the user') . '</li>';
+      $output .= '<li>' . t('The checkbox & submit button texts') . '</li>';
+      $output .= '</ul>';
+
+      $output .= '<br/>';
+
+      $output .= '<h3>Similar Modules</h3>';
+      $output .= 'There are modules ([Terms of Use](https://drupal.org/project/terms_of_use) and [Legal](https://drupal.org/project/legal)) which provide similar functionality during registration. The Agreement module provides the functionality to show an agreement to an existing user base, without requiring the users to re-register.';
+
+      return $output;
+    break;
+  }
+}
